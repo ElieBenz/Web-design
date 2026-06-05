@@ -1,0 +1,656 @@
+/* PROFESSIONAL MOVIE DETAIL STYLES */
+
+/* MOVIE DETAIL HERO SECTION */
+.movie-detail-hero {
+  padding: 40px 0;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-detail-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.1) 0%, rgba(15, 23, 42, 0.8) 100%);
+  z-index: 1;
+}
+
+.movie-detail-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 30px;
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.movie-poster-large {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  transform: perspective(1000px) rotateY(-3deg);
+  transition: all 0.4s ease;
+}
+
+.movie-poster-large:hover {
+  transform: perspective(1000px) rotateY(0deg) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.movie-poster-large img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.play-trailer-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.movie-poster-large:hover .play-trailer-btn {
+  opacity: 1;
+}
+
+.movie-poster-large:hover img {
+  filter: brightness(0.7);
+}
+
+.play-trailer-btn button {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(239, 68, 68, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.play-trailer-btn button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 40px rgba(239, 68, 68, 0.6);
+}
+
+.movie-details {
+  padding-top: 20px;
+}
+
+.movie-details h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.movie-meta {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.movie-meta span {
+  background: rgba(59, 130, 246, 0.2);
+  border: 2px solid #3b82f6;
+  color: #60a5fa;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.movie-meta span:hover {
+  background: rgba(59, 130, 246, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
+
+.movie-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #e2e8f0;
+  margin-bottom: 40px;
+  max-width: 700px;
+}
+
+.movie-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.info-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 4px solid #3b82f6;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.info-item strong {
+  display: block;
+  color: #60a5fa;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* SHOWTIMES SECTION */
+.showtimes-section {
+  padding: 60px 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.showtimes-section h2 {
+  color: #1e293b;
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.showtimes-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 2px;
+}
+
+.date-selector {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.date-selector h3 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.date-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.date-btn {
+  background: white;
+  border: 2px solid #e2e8f0;
+  color: #64748b;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.date-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.date-btn:hover::before {
+  left: 100%;
+}
+
+.date-btn:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
+}
+
+.date-btn.active {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border-color: #3b82f6;
+  box-shadow: 0 5px 20px rgba(59, 130, 246, 0.4);
+}
+
+.showtimes-grid {
+  display: grid;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.cinema-hall {
+  background: white;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.cinema-hall:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border-color: #3b82f6;
+}
+
+.cinema-hall h3 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.cinema-hall h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 30px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 4px;
+}
+
+.time-slots {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.time-slot {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  color: #475569;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.time-slot::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.time-slot:hover::before {
+  left: 100%;
+}
+
+.time-slot:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
+}
+
+.time-slot.selected {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border-color: #3b82f6;
+  box-shadow: 0 5px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* BOOKING SUMMARY */
+.booking-summary {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: white;
+  padding: 24px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.booking-summary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at top right, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.booking-summary > * {
+  position: relative;
+  z-index: 2;
+}
+
+.selected-showtime h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #60a5fa;
+}
+
+.selected-showtime p {
+  font-size: 1rem;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+.ticket-prices {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 16px;
+}
+
+.price-item:last-child {
+  border-bottom: none;
+  font-weight: 700;
+  color: #60a5fa;
+  font-size: 18px;
+}
+
+.book-tickets-btn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+}
+
+.book-tickets-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.book-tickets-btn:hover::before {
+  left: 100%;
+}
+
+.book-tickets-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .movie-detail-content {
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+  }
+  
+  .movie-poster-large img {
+    height: 500px;
+  }
+  
+  .movie-details h1 {
+    font-size: 3rem;
+  }
+  
+  .booking-summary {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-detail-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .movie-poster-large {
+    transform: none;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .movie-poster-large img {
+    height: 500px;
+  }
+  
+  .movie-details h1 {
+    font-size: 2.5rem;
+  }
+  
+  .showtimes-section h2 {
+    font-size: 2.2rem;
+  }
+  
+  .movie-meta {
+    justify-content: center;
+  }
+  
+  .movie-info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .date-buttons {
+    justify-content: center;
+  }
+  
+  .time-slots {
+    justify-content: center;
+  }
+  
+  .cinema-hall {
+    padding: 30px;
+  }
+  
+  .booking-summary {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-detail-hero {
+    padding: 60px 0;
+  }
+  
+  .movie-details h1 {
+    font-size: 2rem;
+  }
+  
+  .movie-meta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .movie-meta span {
+    width: 200px;
+    text-align: center;
+  }
+  
+  .showtimes-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .date-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .date-btn {
+    width: 200px;
+  }
+  
+  .time-slots {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .time-slot {
+    width: 120px;
+    text-align: center;
+  }
+  
+  .booking-summary {
+    padding: 20px;
+  }
+  
+  .book-tickets-btn {
+    width: 100%;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.movie-detail-content {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.cinema-hall {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.cinema-hall:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.cinema-hall:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.booking-summary {
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+/* LOADING STATES */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* ACCESSIBILITY */
+.time-slot:focus,
+.date-btn:focus,
+.book-tickets-btn:focus {
+  outline: 3px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+/* PRINT STYLES */
+@media print {
+  .movie-detail-hero {
+    background: white;
+    color: black;
+  }
+  
+  .booking-summary {
+    background: white;
+    color: black;
+    border: 2px solid #000;
+  }
+  
+  .play-trailer-btn {
+    display: none;
+  }
+}
+

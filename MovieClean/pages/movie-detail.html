@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Action Thriller - HUAYI Cinema</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/moviesinfo.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <img src="../images/logo.png" alt="HUAYI Logo">
+        </div>
+        <nav class="navigation">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="cinema.html" class="active">Cinema Management</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="lang">
+          <a href="#">English / 中文</a>
+        </div>
+        <div class="menu-toggle" id="menuToggle">☰</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- Movie Detail Hero -->
+    <section class="movie-detail-hero">
+      <div class="container">
+        <div class="movie-detail-content">
+          <div class="movie-poster-large">
+            <img src="https://images.unsplash.com/photo-1489599805362-5a4b4b4b4b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Action Thriller Poster">
+            <div class="play-trailer-btn">
+              <button onclick="playTrailer()">▶ Play Trailer</button>
+            </div>
+          </div>
+          
+          <div class="movie-details">
+            <h1>Action Thriller</h1>
+            <div class="movie-meta">
+              <span class="rating">⭐ 8.5/10</span>
+              <span class="duration">⏱ 2h 15m</span>
+              <span class="year">📅 2024</span>
+            </div>
+            <p class="movie-description">
+              An intense action thriller that follows a former special forces operative who must navigate through a web of conspiracy and betrayal to save his family. With stunning visuals and heart-pounding sequences, this film delivers non-stop entertainment.
+            </p>
+            <div class="movie-info-grid">
+              <div class="info-item">
+                <strong>Director:</strong> John Smith
+              </div>
+              <div class="info-item">
+                <strong>Cast:</strong> Tom Johnson, Sarah Wilson, Mike Davis
+              </div>
+              <div class="info-item">
+                <strong>Genre:</strong> Action, Thriller
+              </div>
+              <div class="info-item">
+                <strong>Language:</strong> English
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Showtimes Section -->
+    <section class="showtimes-section">
+      <div class="container">
+        <h2>Showtimes & Tickets</h2>
+        
+        <div class="date-selector">
+          <h3>Select Date</h3>
+          <div class="date-buttons">
+            <button class="date-btn active">Today</button>
+            <button class="date-btn">Tomorrow</button>
+            <button class="date-btn">Dec 15</button>
+            <button class="date-btn">Dec 16</button>
+            <button class="date-btn">Dec 17</button>
+          </div>
+        </div>
+
+        <div class="showtimes-grid">
+          <div class="cinema-hall">
+            <h3>Hall A - IMAX</h3>
+            <div class="time-slots">
+              <button class="time-slot">10:30 AM</button>
+              <button class="time-slot">1:45 PM</button>
+              <button class="time-slot">4:20 PM</button>
+              <button class="time-slot">7:00 PM</button>
+              <button class="time-slot">9:30 PM</button>
+            </div>
+          </div>
+
+          <div class="cinema-hall">
+            <h3>Hall B - Standard</h3>
+            <div class="time-slots">
+              <button class="time-slot">11:00 AM</button>
+              <button class="time-slot">2:15 PM</button>
+              <button class="time-slot">5:00 PM</button>
+              <button class="time-slot">7:45 PM</button>
+              <button class="time-slot">10:15 PM</button>
+            </div>
+          </div>
+
+          <div class="cinema-hall">
+            <h3>Hall C - VIP</h3>
+            <div class="time-slots">
+              <button class="time-slot">12:00 PM</button>
+              <button class="time-slot">3:30 PM</button>
+              <button class="time-slot">6:15 PM</button>
+              <button class="time-slot">8:45 PM</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-summary">
+          <div class="selected-showtime">
+            <h4>Selected Showtime</h4>
+            <p>Hall A - IMAX • Today • 7:00 PM</p>
+          </div>
+          <div class="ticket-prices">
+            <div class="price-item">
+              <span>Adult Ticket</span>
+              <span>$15.00</span>
+            </div>
+            <div class="price-item">
+              <span>Child Ticket</span>
+              <span>$10.00</span>
+            </div>
+            <div class="price-item">
+              <span>Senior Ticket</span>
+              <span>$12.00</span>
+            </div>
+          </div>
+          <button class="book-tickets-btn">Book Tickets</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <!-- Navigation Links -->
+      <div class="footer-nav">
+        <a href="../index.html">HOME</a>
+        <span class="dot">•</span>
+        <a href="about.html">ABOUT</a>
+        <span class="dot">•</span>
+        <a href="cinema.html">CINEMA MANAGEMENT</a>
+        <span class="dot">•</span>
+        <a href="news.html">NEWS</a>
+        <span class="dot">•</span>
+        <a href="contact.html">CONTACT</a>
+      </div>
+
+      <!-- Address -->
+      <div class="footer-address">
+        <span class="icon">📍</span>
+        <span>706, Building 4, Excellence Century Center, Futian District, Shenzhen</span>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="footer-phone">
+        <span class="icon">📞</span>
+        <span class="phone-number">0755-82345345</span>
+      </div>
+
+      <!-- QR Codes -->
+      <div class="footer-qr">
+        <div class="qr-code">
+          <div class="qr-placeholder">QR</div>
+          <span class="qr-label">WeChat Service</span>
+        </div>
+        <div class="qr-code">
+          <div class="qr-placeholder">QR</div>
+          <span class="qr-label">App</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-copyright">
+      <p>©2024 HUAYI GROUP</p>
+    </div>
+  </footer>
+
+  <!-- Floating Action Button -->
+  <div class="floating-action-btn">
+    <a href="tel:+1234567890">📞</a>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <div class="scroll-to-top">
+    <a href="#top">↑</a>
+  </div>
+
+  <script src="../scripts/header.js"></script>
+  <script>
+    function playTrailer() {
+      alert('Trailer would play here!');
+    }
+
+    // Date selection
+    document.querySelectorAll('.date-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.date-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    // Time slot selection
+    document.querySelectorAll('.time-slot').forEach(slot => {
+      slot.addEventListener('click', function() {
+        document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+        this.classList.add('selected');
+      });
+    });
+  </script>
+</body>
+</html>
+
